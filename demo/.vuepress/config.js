@@ -1,7 +1,7 @@
 module.exports = {
   title: 'vuepress-theme-bulma',
   description: 'A pure Bulma.css theme for VuePress',
-  base: '/',
+  base: '/vuepress-theme-bulma/',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' }]
   ],
