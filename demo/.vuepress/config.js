@@ -1,11 +1,17 @@
 module.exports = {
-  title: 'vuepress-theme-bulma',
-  description: 'A pure Bulma.css theme for VuePress',
+  title: 'Resources for technical writers',
+  description: 'Test site built with VuePress',
   base: '/',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' }]
   ],
   serviceWorker: true,
+  plugins: ['one-click-copy', {
+    copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+    copyMessage: 'Copy successfully and then paste it for use.', // default is 'Copy successfully and then paste it for use.'
+    duration: 300, // prompt message display time.
+    showInMobile: false // whether to display on the mobile side, default: false.
+  }],
   markdown: {
     lineNumbers: true,
     config: md => {
@@ -19,16 +25,11 @@ module.exports = {
     }
   },
   themeConfig: {
-    logo: 'https://vuepress.vuejs.org/hero.png',
+    logo: './logo.svg',
     nav: [
       { icon: 'fas fa-book', iconClass: 'has-text-danger', text: 'Documentation', link: '/docs/' },
-      { text: 'VuePress', link: 'https://vuepress.vuejs.org/' },
-      { icon: 'fab fa-lg fa-github', iconClass: 'is-medium', text: 'GitHub', link: 'https://github.com/nakorndev/vuepress-theme-bulma' },
-      { text: 'Dropdown', items: [
-        { text: 'Google', link: 'https://www.google.com' },
-        { text: 'And yet another google!', link: 'https://www.google.co.th/' }
-      ] }
-    ],
+      { icon: 'fab fa-lg fa-github', iconClass: 'is-medium', text: 'GitHub', link: 'https://github.com/ivancheban/vuepress-theme-bulma' },
+      ],
     displayAllHeaders: true,
     serviceWorker: true,
     sidebar: [
@@ -39,31 +40,14 @@ module.exports = {
         collapsable: true,
         children: [
           '/docs/',
-          '/docs/table-of-contents',
-          '/docs/front-matters',
-          '/docs/pictures',
-          '/docs/tables',
-          '/docs/emoji',
-          '/docs/custom-containers',
-          '/docs/code-blocks',
-          '/docs/markdown-it',
-          '/docs/markdown-vuepress',
-          '/docs/custom-layout'
-        ]
-      },
-      {
-        title: 'Lorem2',
-        collapsable: true,
-        children: [
-          '/lorem2/',
-          '/lorem2/test'
+          '/docs/hugo-api'
         ]
       }
     ],
     displayAllHeaders: false,
-    repo: 'nakorndev/vuepress-theme-bulma',
+    repo: 'ivancheban/vuepress-theme-bulma',
     repoLabel: 'Contribute!',
-    docsRepo: 'nakorndev/vuepress-theme-bulma',
+    docsRepo: 'ivancheban/vuepress-theme-bulma',
     docsDir: 'demo',
     docsBranch: 'master',
     editLinks: true,

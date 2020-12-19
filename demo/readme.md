@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: https://vuepress.vuejs.org/hero.png
-actionText: To first documentation
+heroImage: ./logo.svg
+actionText: View documentation
 actionLink: /docs/
 features:
 - title: aspernatur
@@ -10,5 +10,4 @@ features:
   details: Aspernatur velit maxime voluptate impedit facilis amet ipsum amet.
 - title: quas
   details: Veniam quos ducimus laudantium sequi magni.
-footer: MIT Licensed by nakorndev
----
+footer: All rights reserved — Ivan Cheban 2020

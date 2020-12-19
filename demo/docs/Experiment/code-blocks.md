@@ -1,6 +1,6 @@
 # Code Blocks
 
-``` js{4}
+```js
 export default {
   data () {
     return {
